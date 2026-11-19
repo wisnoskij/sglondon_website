@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page - Sovereign Grace Baptist Church</title>
+	<link id="icon" rel="icon" href="images\favicon32.png" type="image/x-icon">
+  <script>
+		//Check if device has dark theme
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			let favicon = document.getElementById('icon');
+			let favicon_href = favicon.href
+
+			//Check if already using the inverted dark theme icon, if not append 'i' at end.
+			//REQUIERMENT: Have have 2 icons one with the asme name as the other
+			//but with an appended 'i' at the end. The first name must not end in 'i'
+			let index = favicon_href.lastIndexOf('.') - 1;
+			if (favicon_href[index] !== 'i') { //if it is not already an inverted image
+				//insert 'i' at index (right before the extention)
+				favicon.href = favicon_href.slice(0, index + 1) + 'i' + favicon_href.slice(index + 1);
+			}
+		}
+	</script>
+	<style>
+		.bgtest {
+			overflow: hidden;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			background-image: url('images/background-01.jpg');
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: 2050px;
+			position: absolute;
+
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+
+			overflow: visible;
+		}
+		@media (max-width:2050px) {
+			
+		}
+		@media (min-width:2051px) {
+			
+		}
+	</style>
+</head>
+<body>
+	<span class="bgtest"></span>
+	<span class="gradient"></span>
+</body>
+</html>
+<span class="et_parallax_bg lazyloaded" style=""></span><span class="et_parallax_gradient" style="background-image: linear-gradient( 180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100% );mix-blend-mode: overlay;"></span>
+<!--
+<span class="et_parallax_bg lazyloaded" 
+style="background-image: 
+url(&quot;https://sglondon.ca/wp-content/uploads/2023/10/dreamstime_xxl_40660947-scaled-1.jpg&quot;);
+ height: 1108px; transform: translate(0px, 108px);"
+  data-bg-image="url(https://sglondon.ca/wp-content/uploads/2023/10/dreamstime_xxl_40660947-scaled-1.jpg)">
+  </span>
+  <span class="et_parallax_gradient" style="background-image:
+   linear-gradient( 180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100% );
+   mix-blend-mode: overlay;"></span>ss
