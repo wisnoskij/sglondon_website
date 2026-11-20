@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Home Page - Sovereign Grace Baptist Church</title>
 	<link id="icon" rel="icon" href="images\favicon32.png" type="image/x-icon">
-  <script>
+  <script>/* TODO: Caching export CSS to linked file */
 		//Check if device has dark theme
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			let favicon = document.getElementById('icon');
@@ -99,7 +99,6 @@
 			color: rgba(224,43,32,1) !important;
 		}
 		.right_button {
-			margin-left: auto;
 			color: white;
 			background-color: black;
 			border: 2px solid white;
@@ -135,7 +134,7 @@
 				box-shadow: 0 2px 18px rgba(0, 0, 0, .2);
 			}
 		}
-
+		/* Turn off Link styling */
 		a.no-style,
 		a.no-style:link,
 		a.no-style:visited,
@@ -145,20 +144,59 @@
 			text-decoration: none;   /* Removes underline */
 			background: transparent; /* Removes any background highlights */
 		}
+		@media (max-width:980px) {
+			.wide_menu {
+				display: none !important;
+			}
+			#ham_menu {
+				display: block !important;
+			}
+		}
+		@media (min-width:981px) {
+			.wide_menu {
+				display: block !important;
+			}
+			#ham_menu {
+				display: none !important;
+			}
+		}
 	</style>
 </head>
 <body>
 	<span class="menu">
 		<img src="images/logo.png" alt="Logo" width="40" height="40" style="margin-right: 10px">
-		<a class="no-style" href="index.html" title="Home Page"><span class="current_page">HOME PAGE</span></a>
-		<a class="no-style" href="beliefs.html" title="Beliefs"><span>BELIEFS</span></a>
-		<a class="no-style" href="leadership.html" title="Leadership"><span>LEADERSHIP</span></a>
-		<a class="no-style" href="community.html" title="Community"><span>COMMUNITY</span></a>
-		<a class="no-style" href="services.html" title="Services"><span>SERVICES</span></a>
-		<a class="no-style" href="sermons.html" title="Sermons"><span>SERMONS</span></a>
-		<a class="no-style" href="resources.html" title="Resources"><span>RESOURCES</span></a>
-		<a class="no-style" href="contact.html" title="Contact"><span>CONTACT</span></a>
-		<a class="no-style" href="#" title="Back"><span class="right_button">BACK</span></a>
+		<a class="no-style" href="index.html" title="Home Page">
+			<span class="current_page">HOME PAGE</span>
+		</a>
+		<a class="no-style wide_menu" href="beliefs.html" title="Beliefs">
+			<span>BELIEFS</span>
+		</a>
+		<a class="no-style wide_menu" href="leadership.html" title="Leadership">
+			<span>LEADERSHIP</span>
+		</a>
+		<a class="no-style wide_menu" href="community.html" title="Community">
+			<span>COMMUNITY</span>
+		</a>
+		<a class="no-style wide_menu" href="services.html" title="Services">
+			<span>SERVICES</span>
+		</a>
+		<a class="no-style wide_menu" href="sermons.html" title="Sermons">
+			<span>SERMONS</span>
+		</a>
+		<a class="no-style wide_menu" href="resources.html" title="Resources">
+			<span>RESOURCES</span>
+		</a>
+		<a class="no-style wide_menu" href="contact.html" title="Contact">
+			<span>CONTACT</span>
+		</a>
+		<a class="no-style" id="ham_menu"
+				style="margin-bottom: 7px; margin-left: auto; font-size: 20px; display: none;" 
+				href="#" title="Menu">
+			<span class="right_button">☰</span>
+		</a>
+		<a class="no-style wide_menu" style="margin-bottom: 4px; margin-left: auto;" href="#" title="Back">
+			<span class="right_button">BACK</span>
+		</a>
 	</span>
 	<span class="bgtest center"></span>
 	<span>
