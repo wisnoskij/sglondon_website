@@ -93,9 +93,22 @@
 			font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
 			font-weight: 600;
 			font-size: 15px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 		}
 		.current_page {
-			color: rgba(224,43,32,0.76) !important;s
+			color: rgba(224,43,32,1) !important;
+		}
+		.right_button {
+			margin-left: auto;
+			color: white;
+			background-color: black;
+			border: 2px solid white;
+			font-size: 10px;
+			
+			padding: 7px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			border-radius: 10px;
 		}
 		/* When scrolled down at all, get background of menu bar to white */
 		@container scroll-state(stuck: top) {
@@ -122,20 +135,30 @@
 				box-shadow: 0 2px 18px rgba(0, 0, 0, .2);
 			}
 		}
+
+		a.no-style,
+		a.no-style:link,
+		a.no-style:visited,
+		a.no-style:hover,
+		a.no-style:active {
+			color: inherit;          /* Matches parent text color */
+			text-decoration: none;   /* Removes underline */
+			background: transparent; /* Removes any background highlights */
+		}
 	</style>
 </head>
 <body>
 	<span class="menu">
-		<img src="images/logo.png" alt="Logo" width="40" height="40" style="margin-left: 40px">
-		<span class="current_page">HOME PAGE</span>
-		<span>BELIEFS</span>
-		<span>LEADERSHIP</span>
-		<span>COMMUNITY</span>
-		<span>SERVICES</span>
-		<span>SERMONS</span>
-		<span>RESOURCES</span>
-		<span>CONTACT</span>
-		<span style="margin-left: auto;">BACK</span>
+		<img src="images/logo.png" alt="Logo" width="40" height="40" style="margin-right: 10px">
+		<a class="no-style" href="index.html" title="Home Page"><span class="current_page">HOME PAGE</span></a>
+		<a class="no-style" href="beliefs.html" title="Beliefs"><span>BELIEFS</span></a>
+		<a class="no-style" href="leadership.html" title="Leadership"><span>LEADERSHIP</span></a>
+		<a class="no-style" href="community.html" title="Community"><span>COMMUNITY</span></a>
+		<a class="no-style" href="services.html" title="Services"><span>SERVICES</span></a>
+		<a class="no-style" href="sermons.html" title="Sermons"><span>SERMONS</span></a>
+		<a class="no-style" href="resources.html" title="Resources"><span>RESOURCES</span></a>
+		<a class="no-style" href="contact.html" title="Contact"><span>CONTACT</span></a>
+		<a class="no-style" href="#" title="Back"><span class="right_button">BACK</span></a>
 	</span>
 	<span class="bgtest center"></span>
 	<span>
