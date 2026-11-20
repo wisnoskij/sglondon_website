@@ -66,7 +66,7 @@
 
 		/* The top menu bar */
 		.menu {
-			position: absolute !important;
+			position: fixed !important;
 			width: 100%;
 			max-width: 100%;
 			height: 76px;
@@ -77,15 +77,66 @@
 			right: auto;
 			
 			z-index: 3;
+			background-color: #FFFFFF;
+			color: #000000;
+
+			box-sizing: border-box; /* Makes the padding stay on the screen*/
+			padding-right: 5% !important;
+			padding-left: 5% !important;
+
+			display: flex;
+			align-items: center;	/* vertical */
+
+			gap: 20px;
+
+			/* font */
+			font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+			font-weight: 600;
+			font-size: 15px;
+		}
+		.current_page {
+			color: rgba(224,43,32,0.76) !important;s
 		}
 		/* When scrolled down at all, get background of menu bar to white */
-		html:not([data-scroll='0']) {
-			background-color: #FFFFFF;
+		@container scroll-state(stuck: top) {
+			.menu {
+				background-color: transparent;
+			}
+		}
+		@supports (animation-timeline: scroll()) {
+			.menu {
+				animation: nav-scroll linear both;
+				animation-timeline: scroll(root);
+				/* Transition completes after scrolling 250px */
+				animation-range: 0px 250px;
+			}
+		@keyframes nav-scroll {
+			from {
+				background-color: transparent;
+				color: #FFFFFF;
+				box-shadow: none;
+			}
+			to {
+				background-color: #FFFFFF;
+				color: #000000;
+				box-shadow: 0 2px 18px rgba(0, 0, 0, .2);
+			}
 		}
 	</style>
 </head>
 <body>
-	<span class="menu">testing 1 2 3...</span>
+	<span class="menu">
+		<img src="images/logo.png" alt="Logo" width="40" height="40" style="margin-left: 40px">
+		<span class="current_page">HOME PAGE</span>
+		<span>BELIEFS</span>
+		<span>LEADERSHIP</span>
+		<span>COMMUNITY</span>
+		<span>SERVICES</span>
+		<span>SERMONS</span>
+		<span>RESOURCES</span>
+		<span>CONTACT</span>
+		<span style="margin-left: auto;">BACK</span>
+	</span>
 	<span class="bgtest center"></span>
 	<span>
 	dfsdf<br>
