@@ -18,6 +18,9 @@ h1 {
 	line-height: 1em;
 	font-weight: 500;
 }
+strong {
+	font-size: 60px;
+}
 
 /* Centers things */
 .center {
