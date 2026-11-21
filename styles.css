@@ -3,13 +3,15 @@ body {
 	padding: 0;
 	border: 0;
 	outline: 0;
+	
+	overflow-x: hidden; /* No horizontal scrolling */
 }
 
 /* Centers things */
 .center {
 	display: inline-block;
 	width: 2090px;
-	height: 1250.5px;
+	height: 1022px;
 	background-size: 2090px;
 
 	margin-left: 50%;
@@ -161,8 +163,6 @@ a.no-style:active {
 	
 	text-decoration: none;
 	display: block;
-	
-	
 }
 .dropdown-content a:hover {
 	background-color: #f1f1f1;
