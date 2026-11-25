@@ -4,8 +4,7 @@
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   gap: 2rem;
-  
-  overflow: scroll;
+  overflow: hidden;
   scroll-snap-type: x mandatory;
   
   scroll-marker-group: after;
@@ -19,61 +18,39 @@
   }
 }
 
-/* SCROLL MARKERS */
-
-.carousel::scroll-marker-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  height: 25px;
-  margin-block-start: 1rem;
-}
-
-.carousel li::scroll-marker {
-  content: ' ';
-  border: 2px solid CanvasText;
-  border-radius: 100%;
-  height: 25ppx;
-  width: 25px;
-}
-
-.carousel li::scroll-marker:hover,
-.carousel li::scroll-marker:focus-visible {
-  background: LinkText;
-}
-
-.carousel li::scroll-marker:target-current {
-  background: CanvasText;
-}
-
-/* SCROLL BUTTONS */
-
-.carousel::scroll-button(*) {
-  position: absolute;
-  position-anchor: --carousel;
-  height: 100%;
-}
-
-.carousel::scroll-button(left) {
-  content: "Left";
-  position-area: center left;
-}
-.carousel::scroll-button(right) {
-  content: "Right";
-  position-area: center right;
-}
-
 /* DEMO STYLES */
 
 @layer decor {
   
   .carousel {
-    margin: auto;
     padding: 1.5rem;
-    width: min(100%, 400px);
+    width: 400px;
     
     > li {
       list-style: "";
     }
   }
+}
+
+/* Arrow Styles */
+
+.arrow_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.arrow {
+	font-weight: 900;
+	font-size: 40px;
+	background-color: #EEEEEE;
+	border-radius: 50%;
+	padding: 16px 15px;
+}
+
+.arrow:hover {
+	color: #000000;
+	background-color: #CCCCCC;
+	
+	cursor: pointer;
 }

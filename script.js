@@ -1,4 +1,4 @@
-//Check if device has dark theme
+// Check if device has dark theme
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	let favicon = document.getElementById('icon');
 	let favicon_href = favicon.href
@@ -22,3 +22,18 @@ function toggle_menu(element) {
 	}
 	return(false);
 }
+
+
+// carousel scrolling
+
+
+
+
+/* document.getElementById("carousel").
+Window is width 400, so 400px intivals where the scrolling happens
+scroll(x,y)/scrollTo	scroll to that index (will jump to next when a little over 50% there)
+scrollLeft				The current position of the scroll
+scrollLeftMax			The max position of the scroll
+scrollBy(x,y)			Scroll a certain amount, but always jump to next one, even if only 1px added.
+						Can have unexpected results if clicked too rapidly
+scrollIntoView()		When called on the child element, it jumps to that element */
