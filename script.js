@@ -23,9 +23,28 @@ function toggle_menu(element) {
 	return(false);
 }
 
-
 // carousel scrolling
-
+function scrollInit(carousel) {
+	return(setInterval(() => { scrollNext(carousel); }, 6000));
+// To stop the execution:
+// clearInterval(intervalId);   
+}
+function scrollNext(carousel) {
+	// Current Pos > Width of a single element(16px is half the gap) * (number of elements - 1) - 10(small saftey area)
+	// Not using scrollLeftMax becuase only avaiallbe in Firefox
+	if(carousel.scrollLeft > ((carousel.clientWidth - 16) * (carousel.children.length - 1)) - 10){
+		carousel.scroll(0, 0);
+	} else {
+		carousel.scrollBy(carousel.clientWidth , 0)
+	}
+}
+function scrollPrev(carousel) {
+	if(carousel.scrollLeft < 10){ // The 10 is random
+		carousel.scroll(999999, 0); // Go to end
+	} else {
+		carousel.scrollBy(-carousel.clientWidth, 0)
+	}
+}
 
 
 

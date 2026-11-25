@@ -4,7 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Home Page - Sovereign Grace Baptist Church</title>
 	<link id="icon" rel="icon" href="images\favicon32.png" type="image/x-icon">
-	<script src="script.js" defer></script>
+	<script defer src="script.js"></script>
+	<script>
+		let intervalId;
+		document.addEventListener("DOMContentLoaded", function() {
+			intervalId = scrollInit(document.getElementById('carousel'));
+		});
+	</script>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="carousel.css">
 </head>
@@ -89,15 +95,15 @@
 		Sunday Services begin @ 11:30 a.m.
 		
 		<div class="arrow_box">
-		<span class="arrow"><</span>
+		<span class="arrow" onClick="clearInterval(intervalId); scrollPrev(document.getElementById('carousel'))"><</span>
 		<ul id="carousel" class="carousel">
 		  <li>
-			<img src="images/carousel-01.jpg" alt="Our Purpose" width="400">
+			<img class="image_fade" src="images/carousel-01.jpg" alt="Our Purpose" width="400">
 			<h2>Our Purpose</h2>
 			<p>We exist by the grace of God and for His glory. All of our activities are for that ultimate purpose.</p>
 		  </li>
 		  <li>
-			<img src="images/carousel-02.jpg" alt="Our Worship" width="400">
+			<img class="image_fade" src="images/carousel-02.jpg" alt="Our Worship" width="400">
 			<h2>Our Worship</h2>
 			<p>Our worship is God honouring, Christ centred & Spirit filled. With expository preaching & uplifting music.</p>
 		  </li>
@@ -107,7 +113,7 @@
 			<p>We believe the Holy Bible is the inspired, infallible, complete Word of God.</p>
 		  </li>
 		  <li>
-			<img src="images/carousel-04.jpg" alt="Our Community" width="400">
+			<img class="image_fade" src="images/carousel-04.jpg" alt="Our Community" width="400">
 			<h2>Our Community</h2>
 			<p>We are a community gathered and united in Christ to reflect His loving kindness and grace.</p>
 		  </li>
@@ -118,12 +124,7 @@
 				info@sglondon.ca</p>
 			</li>
 		</ul>
-		<span class="arrow">></span></div>
+		<span class="arrow" onClick="clearInterval(intervalId); scrollNext(document.getElementById('carousel'))">></span></div>
 	</span>
 </body>
 </html>
-
-<!-- 
-document.getElementById("carousel").
-Window is width 400, so 
-scroll(x,y)

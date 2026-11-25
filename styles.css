@@ -182,3 +182,10 @@ a.no-style:active {
 .dropdown-content a:hover {
 	background-color: #f1f1f1;
 }
+
+.image_fade {
+	-webkit-mask-image: linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent), linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent), linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+	-webkit-mask-composite: source-in;
+	mask-composite: intersect;
+}
