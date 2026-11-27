@@ -189,3 +189,37 @@ a.no-style:active {
 	-webkit-mask-composite: source-in;
 	mask-composite: intersect;
 }
+
+.pastor_element {
+	width: 186px;
+	text-align: center;
+	> h4, h6 {
+		margin: 0px;
+		color: #333;
+		font-weight: 500;
+	}
+	> h4 {
+		font-size: 20px;
+	}
+	> h6 {
+		font-size: 16px;
+	}
+	> p {
+		margin:	5px;
+	}
+	> img {
+		border-radius: 50%;
+		width: 186px;
+		height: 186px;
+		border-width: 2px;
+		border-style: solid;
+	}
+}
+.pastors {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	flex-wrap: wrap;
+	padding-left: 50px;
+    padding-right: 50px;
+}

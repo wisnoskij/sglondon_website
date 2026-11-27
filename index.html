@@ -8,14 +8,14 @@
 	<script>
 		let intervalId;
 		let intervalId_2;
-		/*
+
 		document.addEventListener("DOMContentLoaded", function() {
 			intervalId = scrollInit(document.getElementById('carousel'), 6000);
 		});
 		
 		document.addEventListener("DOMContentLoaded", function() {
 			intervalId_2 = scrollInit(document.getElementById('carousel_2'), 7000);
-		});*/
+		});
 	</script>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="carousel.css">
@@ -135,7 +135,7 @@
 	</span>
 	
 	<span>
-		<ul id="carousel_2" class="carousel" style="padding: 0px; height: 680px">
+		<ul id="carousel_2" class="carousel " style="padding: 0px; height: 680px">
 			<li style="display: flex;">
 				<img class="carousel_oimg" src="images/carousel_2-1.jpg" alt="Gathering for Worship">
 				<div class="carousel_overlay">
@@ -177,17 +177,40 @@
 				</div>
 			</li>
 		</ul>
+		<div class="arrow_box">
+			<span id="car2_prev" class="arrow" onClick="clearInterval(intervalId_2); scrollPrev(document.getElementById('carousel_2'))">&lt;</span>
+			<span id="car2_next" class="arrow" onClick="clearInterval(intervalId_2); scrollNext(document.getElementById('carousel_2'))">&gt;</span>
+		</div>
 	</span>
+	
 	<span>
-		asdasd
-		sadas
-		asdasdasd
-		asdasdsa
-		asdasdasdsd
-		asdasddsa
-		<span class="arrow" onClick="clearInterval(intervalId_2); scrollPrev(document.getElementById('carousel_2'))">&lt;</span>
-		
-		<span class="arrow" onClick="clearInterval(intervalId_2); scrollNext(document.getElementById('carousel_2'))">&gt;</span>
+		<h1 style="text-align: center; font-weight: 300; font-size: 52px;">Our Pastors</h1>
+		<span class="pastors">
+			<div class="pastor_element">
+				<img src="images/pastor-chuck.jpg" alt="Our Purpose">
+				<h4>Chuck Stover</h4>
+				<h6>Elder</h6>
+				<p>At the age of 40, God in his mercy effectually called Chuck into his kingdom. He is a retired dentist and has been married to his wife, Lillian, for 30 years.</p>
+			</div>
+			<div class="pastor_element">
+				<img src="images/pastor-jim.jpg" alt="Our Purpose">
+				<h4>Jim Sisco</h4>
+				<h6>Elder</h6>
+				<p>Jim came to faith through the radio ministry of ‘Back to the Bible’ in 1979 at the age of 23. Jim and his wife, Herminia, were among the group of people that were called to plant SGBC.</p>
+			</div>
+			<div class="pastor_element">
+				<img src="images/pastor-marc.jpg" alt="Our Purpose">
+				<h4>Marc Bertrand</h4>
+				<h6>Adjunct Elder</h6>
+				<p>Marc has served as pastor at Walsh Baptist Church since January of 2003. God called him to be a founding pastor of this church and he continues to serve as an Adjunct Elder.</p>
+			</div>
+			<div class="pastor_element">
+				<img src="images/pastor-don.jpg" alt="Our Purpose">
+				<h4>Don Theobald</h4>
+				<h6>Featured Preacher</h6>
+				<p>Don served in full-time pastoral ministries in 2 Baptist churches for a total of 27 years. He is currently very busy with his itinerant ministry and confernece speaking.</p>
+			</div>
+		</span>
 	</span>
 </body>
 </html>

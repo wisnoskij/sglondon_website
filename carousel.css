@@ -70,7 +70,31 @@
 
 .arrow:hover {
 	color: #000000;
-	background-color: #CCCCCC;
+	background-color: #CCCCCC !important;
 	
 	cursor: pointer;
+}
+
+#carousel_2 {
+	anchor-name: --overlay_carousel;
+}
+
+#car2_next {
+	position: absolute;
+	position-anchor: --overlay_carousel;
+	position-area: span-left;
+	background-color: transparent;
+	color: #CCC
+	opacity: 0.6;
+	margin-right: 50px;
+}
+
+#car2_prev {
+	position: absolute;
+	position-anchor: --overlay_carousel;
+	position-area: span-right;
+	background-color: transparent;
+	color: #CCC
+	opacity: 0.6;
+	margin-left: 50px;
 }
