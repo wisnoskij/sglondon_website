@@ -193,6 +193,8 @@ a.no-style:active {
 .pastor_element {
 	width: 186px;
 	text-align: center;
+	padding-bottom: 50px;
+	
 	> h4, h6 {
 		margin: 0px;
 		color: #333;
@@ -222,4 +224,20 @@ a.no-style:active {
 	flex-wrap: wrap;
 	padding-left: 50px;
     padding-right: 50px;
+}
+
+.preaching {
+	background-color: #474747;
+	height: 420px;
+	display: block;
+}
+.line {
+	background-color: white;
+	height: 3px;
+	display: block;
+}
+.footer {
+	background-color: black;
+	height: 420px;
+	display: block;
 }
