@@ -1,39 +1,51 @@
 .carousel {
-  anchor-name: --carousel;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  gap: 32px;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
+	anchor-name: --carousel;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 100%;
+	gap: 32px;
+	overflow: hidden;
+	scroll-snap-type: x mandatory;
   
-  scroll-marker-group: after;
+	scroll-marker-group: after;
 
-  > li {
-    scroll-snap-align: center;
-  }
+	list-style: none; /* turn off the bullets */
   
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
-  }
+	> li {
+		scroll-snap-align: center;
+		position: relative;
+		height: inherit;
+		align-items: center;
+	}
+  
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
 }
 
 /* DEMO STYLES */
-
 @layer decor {
-  
   .carousel {
     padding: 1.5rem;
-    width: 400px;
-    
-    > li {
-      list-style: "";
-    }
   }
 }
 
-/* Arrow Styles */
+.carousel_overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
 
+.carousel_oimg {
+	min-height: 680px;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Arrow Styles */
 .arrow_box {
 	display: flex;
 	align-items: center;

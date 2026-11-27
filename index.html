@@ -7,9 +7,15 @@
 	<script defer src="script.js"></script>
 	<script>
 		let intervalId;
+		let intervalId_2;
+		/*
 		document.addEventListener("DOMContentLoaded", function() {
-			intervalId = scrollInit(document.getElementById('carousel'));
+			intervalId = scrollInit(document.getElementById('carousel'), 6000);
 		});
+		
+		document.addEventListener("DOMContentLoaded", function() {
+			intervalId_2 = scrollInit(document.getElementById('carousel_2'), 7000);
+		});*/
 	</script>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="carousel.css">
@@ -50,6 +56,7 @@
 			<span class="right_button">BACK</span>
 		</a>
 	</span>
+	
 	<div id="dropdown-content" class="dropdown-content" style="display: none;">
 		<a href="index.html" title="Home Page">
 			<span class="current_page">HOME PAGE</span>
@@ -82,12 +89,11 @@
 			<p style="text-align: center; transform: translateY(210px); font-size: 22px; color: #FFFFFF; ">A loving community in Christ</p>
 	</span>
 	
-	<svg style="width: 100%; height: 105px; margin-top: -104px; z-index: 2; position: absolute;" 
-			viewBox="0 0 105 105" preserveAspectRatio="none">
+	<svg style="width: 100%; height: 105px; margin-top: -104px; z-index: 2; position: absolute;" viewBox="0 0 105 105" preserveAspectRatio="none">
 		<polygon points="0,100 105,0 105,105 0,105" fill="#FFFFFF" />
 	</svg>
 	
-	<span style="text-align: center; display: block;">
+	<span style="text-align: center; display: block; height: 600px;">
 		<h1>Welcome to Sovereign Grace Baptist Church</h1>
 
 		We are a confessional, reformed Baptist church in London, Ontario, Canada<br>
@@ -96,7 +102,7 @@
 		
 		<div class="arrow_box">
 			<span class="arrow" onClick="clearInterval(intervalId); scrollPrev(document.getElementById('carousel'))">&lt;</span>
-			<ul id="carousel" class="carousel">
+			<ul id="carousel" class="carousel" style="width: 400px;">
 				<li>
 					<img class="image_fade" src="images/carousel-01.jpg" alt="Our Purpose" width="400">
 					<h2>Our Purpose</h2>
@@ -129,7 +135,59 @@
 	</span>
 	
 	<span>
-	twrfsd
+		<ul id="carousel_2" class="carousel" style="padding: 0px; height: 680px">
+			<li style="display: flex;">
+				<img class="carousel_oimg" src="images/carousel_2-1.jpg" alt="Gathering for Worship">
+				<div class="carousel_overlay">
+					<h1>Gathering for Worship</h1>
+					<p>Worship that is God centered and reverant. Adhering to the God honouring regulations revealed in the Holy Bible.</p>
+					<br>
+					<br>
+					<h3><a href="services.html">Learn More</a></h3>
+				</div>
+			</li>
+			<li style="display: flex;">
+				<img class="carousel_oimg" src="images/carousel_2-2.jpg" alt="Gathering for Prayer">
+				<div class="carousel_overlay">
+					<h1>Gathering for Prayer</h1>
+					<p>Upholding one another in prayer, speaking the truth in love, bearing one another’s burdens.</p>
+					<br>
+					<br>
+					<h3><a href="services.html">Learn More</a></h3>
+				</div>
+			</li>
+			<li style="display: flex;">
+				<img class="carousel_oimg" src="images/carousel_2-3.jpg" alt="Gathering for Discipleship">
+				<div class="carousel_overlay">
+					<h1>Gathering for Discipleship</h1>
+					<p>Preparing for the work of ministry by learning, growing and maturing in the knowledge of Christ.</p>
+					<br>
+					<br>
+					<h3><a href="services.html">Learn More</a></h3>
+				</div>
+			</li>
+			<li style="display: flex;">
+				<img class="carousel_oimg" src="images/carousel-04.jpg" alt="Gathering for Fellowship">
+				<div class="carousel_overlay">
+					<h1>Gathering for Fellowship</h1>
+					<p>A joyful community establised in the loving-kindness and grace of Jesus Christ.</p>
+					<br>
+					<br>
+					<h3><a href="community.html">Learn More</a></h3>
+				</div>
+			</li>
+		</ul>
+	</span>
+	<span>
+		asdasd
+		sadas
+		asdasdasd
+		asdasdsa
+		asdasdasdsd
+		asdasddsa
+		<span class="arrow" onClick="clearInterval(intervalId_2); scrollPrev(document.getElementById('carousel_2'))">&lt;</span>
+		
+		<span class="arrow" onClick="clearInterval(intervalId_2); scrollNext(document.getElementById('carousel_2'))">&gt;</span>
 	</span>
 </body>
 </html>

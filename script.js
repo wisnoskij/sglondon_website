@@ -24,8 +24,8 @@ function toggle_menu(element) {
 }
 
 // carousel scrolling
-function scrollInit(carousel) {
-	return(setInterval(() => { scrollNext(carousel); }, 6000));
+function scrollInit(carousel, interval) {
+	return(setInterval(() => { scrollNext(carousel); }, interval));
 // To stop the execution:
 // clearInterval(intervalId);   
 }
